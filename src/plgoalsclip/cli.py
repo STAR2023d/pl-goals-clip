@@ -11,8 +11,7 @@ from . import config, pipeline, sources
 
 def _build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        prog="plgc",
-        description="Premier League match-week goal clip & edit pipeline",
+        prog="plgc", description="Premier League match-week goal clip & edit pipeline",
     )
     sub = p.add_subparsers(dest="command", required=True)
 
@@ -20,10 +19,12 @@ def _build_parser() -> argparse.ArgumentParser:
     p_build.add_argument("week", nargs="?", default=10, type=int, help="match week number")
     p_build.add_argument("--season", default="2026-27", help="season (default 2026-27)")
 
-    p_render = sub.add_parser("render", help="render per-match outputs")
-    p_render.add_argument("week", nargs="?", default=10, type=int)
+    sub.add_parser("render", help="render per-match outputs")
 
-    p_status = sub.add_parser("status", help="show source access status")
+    p_yt = sub.add_parser("youtube", help="gather unauthenticated YouTube clips for a match week and edit them")
+    p_yt.add_argument("week", nargs="?", default=10, type=int)
+
+    sub.add_parser("status", help="show source access status")
     return p
 
 
@@ -54,6 +55,18 @@ def cmd_render(args):
         n_goals += len(m.goals)
     print(f"Matchweek {args.week} rendered: {len(matches)} matches, {n_goals} goal records",
           f"(clips pending official access — see results/<match_id>/manifest.json)")
+    return 0
+
+
+def cmd_youtube(args):
+    """Gather unauthenticated YouTube clips for a match week and edit them."""
+    matches = pipeline.build_week(args.week)
+    config.RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    plan = pipeline.render_with_videos(matches, config.RESULTS_DIR)
+    for entry in plan:
+        status = entry["source"].get("status", "pending")
+        print(f"  {entry['match'].id:<24} {entry['match'].home:<16} -> {status:<11} {entry['highlights_clip']}")
+    print(f"Matchweek {args.week} youtube render done: {len(plan)} matches")
     return 0
 
 
