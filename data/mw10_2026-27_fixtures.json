@@ -1,0 +1,112 @@
+{
+  "season": "2026/27",
+  "season_label": "Premier League 2026/27",
+  "matchweek": 10,
+  "played": "6-8 November 2026",
+  "status": "matches played, official schedule from draft.premierleague.com",
+  "source": "https://draft.premierleague.com/en/fixtures",
+  "matches": [
+    {
+      "id": "everton-coventry",
+      "home": "Everton",
+      "away": "Coventry City",
+      "date": "2026-11-06",
+      "kickoff_utc": "20:00",
+      "venue": "Stadium of Light",
+      "score": "2-0",
+      "status": "completed"
+    },
+    {
+      "id": "leeds-spurs",
+      "home": "Leeds United",
+      "away": "Tottenham Hotspur",
+      "date": "2026-11-07",
+      "kickoff_utc": "12:30",
+      "venue": "Elland Road",
+      "score": "1-1",
+      "status": "completed"
+    },
+    {
+      "id": "arsenal-hull",
+      "home": "Arsenal",
+      "away": "Hull City",
+      "date": "2026-11-07",
+      "kickoff_utc": "15:00",
+      "venue": "Emirates Stadium",
+      "score": "1-1",
+      "status": "completed"
+    },
+    {
+      "id": "fulham-newcastle",
+      "home": "Fulham",
+      "away": "Newcastle United",
+      "date": "2026-11-07",
+      "kickoff_utc": "15:00",
+      "venue": "Craven Cottage",
+      "score": "2-0",
+      "status": "completed"
+    },
+    {
+      "id": "forest-city",
+      "home": "Nottingham Forest",
+      "away": "Manchester City",
+      "date": "2026-11-07",
+      "kickoff_utc": "17:30",
+      "venue": "City Ground",
+      "score": "2-0",
+      "status": "completed"
+    },
+    {
+      "id": "brighton-brentford",
+      "home": "Brighton & Hove Albion",
+      "away": "Brentford",
+      "date": "2026-11-08",
+      "kickoff_utc": "14:00",
+      "venue": "American Express Stadium",
+      "score": "2-0",
+      "status": "completed"
+    },
+    {
+      "id": "palace-liverpool",
+      "home": "Crystal Palace",
+      "away": "Liverpool",
+      "date": "2026-11-08",
+      "kickoff_utc": "14:00",
+      "venue": "Selhurst Park",
+      "score": "2-1",
+      "status": "completed"
+    },
+    {
+      "id": "ipswich-bournemouth",
+      "home": "Ipswich Town",
+      "away": "Bournemouth",
+      "date": "2026-11-08",
+      "kickoff_utc": "14:00",
+      "venue": "Portman Road",
+      "score": "3-0",
+      "status": "completed"
+    },
+    {
+      "id": "sunderland-chelsea",
+      "home": "Sunderland",
+      "away": "Chelsea",
+      "date": "2026-11-08",
+      "kickoff_utc": "14:00",
+      "venue": "Stadium of Light",
+      "score": "2-1",
+      "status": "completed"
+    },
+    {
+      "id": "manutd-villa",
+      "home": "Manchester United",
+      "away": "Aston Villa",
+      "date": "2026-11-08",
+      "kickoff_utc": "16:30",
+      "venue": "Old Trafford",
+      "score": "3-3",
+      "status": "completed"
+    }
+  ],
+  "count": 10,
+  "note": "Official fixtures confirmed from premierleague.com/fixtures. Individual goal clips are NOT published on club/team websites (those are match-summary pages). See README for the authoritative goal-clip source and access status."
+}
